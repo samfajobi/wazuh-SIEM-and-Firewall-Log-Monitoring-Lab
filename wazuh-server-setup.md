@@ -13,3 +13,11 @@ This document explains how to install, configure, and run a Wazuh Server (Manage
 
 ```bash
 sudo apt update && sudo apt upgrade -y
+```
+
+## Step 2 — Download and run the Wazuh installation assistant.
+
+```bash
+curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+```
+
