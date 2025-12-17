@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-This project showcases a **Security Operations Center (SOC) home lab** built with **Wazuh SIEM** and integrated with a **network firewall (pfSense/OPNsense)** to monitor, detect, and analyze security events across both **endpoint and network layers**.
+This project showcases a **Security Operations Center (SOC) home lab** built with **Wazuh SIEM** and integrated with a **network firewall OPNsense** to monitor, detect, and analyze security events across both **endpoint and network layers**.
 
 The lab centralizes security logs from endpoints, authentication services, and firewall devices, enabling effective **security monitoring, alert triage, and incident investigation**. Firewall logs are forwarded to Wazuh using syslog, allowing visibility into suspicious activities such as **unauthorized access attempts, port scanning, brute-force attacks, and network policy violations**.
 
