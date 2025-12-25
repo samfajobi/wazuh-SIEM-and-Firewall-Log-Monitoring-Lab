@@ -1,42 +1,20 @@
-## Step 9: Add a Wazuh Agent (Example: Ubuntu Client)
+# Windows Server Enrollment into Wazuh
 
-On the **agent machine**:
-
-1. Download agent package:
-
-```bash
-curl -sO https://packages.wazuh.com/4.x/apt/wazuh-agent_4.7.0-1_amd64.deb
-sudo dpkg -i wazuh-agent_4.7.0-1_amd64.deb
-```
-
-2. Configure agent:
-
-```bash
-sudo nano /var/ossec/etc/ossec.conf
-```
-
-Set manager IP:
-
-```xml
-<server>
-  <address>192.168.100.20</address>
-</server>
-```
-
-3. Start agent:
-
-```bash
-sudo systemctl enable wazuh-agent
-sudo systemctl start wazuh-agent
-```
+This document outlines the steps used to **enroll a Windows Server host into Wazuh** as part of a SOC monitoring and detection lab.
+The goal is to enable **centralized log collection, endpoint visibility, and security monitoring** from Windows Server into the Wazuh manager.
 
 ---
 
-## Step 10: Verify Agent Connection
+## Prerequisites
 
-From the **Wazuh Dashboard**:
+Before enrolling the Windows Server, ensure the following:
 
-* Go to **Agents**
-* Confirm the agent status is **Active**
+* Wazuh Manager is installed and running
+* Wazuh Dashboard is accessible
+* Network connectivity exists between the Windows Server and Wazuh Manager
+* Administrator privileges on the Windows Server
 
 ---
+
+## Step 1: Create a Wazuh Agent Entry
+
