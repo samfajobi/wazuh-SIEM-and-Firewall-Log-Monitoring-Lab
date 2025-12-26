@@ -156,6 +156,7 @@ These actions simulate:
 * File deletion
 
 ---
+![Wazuh-FIM-1](screenshots/wazuh-FIM-4a.png)
 
 ## Step 4: Monitor FIM Alerts in Wazuh Dashboard
 
