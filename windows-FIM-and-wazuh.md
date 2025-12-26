@@ -72,8 +72,20 @@ On the Windows Server, edit the Wazuh agent configuration file:
 C:\Program Files (x86)\ossec-agent\ossec.conf
 
 ````
+![Wazuh-FIM-1](screenshots/wazuh-FIM.png)
+
 
 Add or update the FIM configuration:
+
+
+```
+To add:
+Add the folder/directory you want the windows agent to monitor
+
+Note:
+At the very top of the file monitoring is the time interval, this determins the interval at which the files will be monitored, it can be changed to your desired time interval.
+
+````
 
 ```xml
 <syscheck>
@@ -91,7 +103,9 @@ Restart the Wazuh agent service:
 ```powershell
 Restart-Service WazuhSvc
 ```
+![Wazuh-FIM-1](screenshots/wazuh-FIM.png)
 
+![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
 ---
 
 ## Step 2: (Optional) Enable Windows Object Access Auditing
@@ -113,7 +127,22 @@ This allows correlation with **Windows Security Event ID 4663**.
 
 ---
 
-## Step 3: Generate File Integrity Events
+## Step 3: Select Wazuh agent for File Monitoring
+
+1. Log into the **Wazuh Dashboard**
+2. Go to Endpoint Detection and select **File Integrity Monitoring**
+
+![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
+
+3. In the Inventory Section, select agent and add your window-server
+
+![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
+
+![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
+
+
+
+## Step 4: Generate File Integrity Events
 
 Create and modify files to simulate activity:
 
@@ -131,6 +160,9 @@ These actions simulate:
 
 ---
 
+![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
+
+
 ## Step 4: Monitor FIM Alerts in Wazuh Dashboard
 
 1. Log into the **Wazuh Dashboard**
@@ -140,6 +172,7 @@ These actions simulate:
 ```
 agent.name: windows-server
 ```
+![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
 
 Observe alerts related to:
 
@@ -149,6 +182,10 @@ Observe alerts related to:
 * Permission changes
 
 ---
+
+![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
+
+![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
 
 ## Step 5: SOC-Style Alert Analysis
 
