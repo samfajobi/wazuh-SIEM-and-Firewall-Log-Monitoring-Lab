@@ -103,9 +103,9 @@ Restart the Wazuh agent service:
 ```powershell
 Restart-Service WazuhSvc
 ```
-![Wazuh-FIM-1](screenshots/wazuh-FIM.png)
-
 ![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
+
+![Wazuh-FIM-1](screenshots/wazuh-FIM-4.png)
 ---
 
 ## Step 2: (Optional) Enable Windows Object Access Auditing
@@ -130,16 +130,13 @@ This allows correlation with **Windows Security Event ID 4663**.
 ## Step 3: Select Wazuh agent for File Monitoring
 
 1. Log into the **Wazuh Dashboard**
-2. Go to Endpoint Detection and select **File Integrity Monitoring**
+2. Go to Endpoint Security and select **File Integrity Monitoring**
 
-![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
+![Wazuh-FIM-1](screenshots/wazuh-FIM-2.png)
 
 3. In the Inventory Section, select agent and add your window-server
 
-![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
-
-![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
-
+![Wazuh-FIM-1](screenshots/wazuh-FIM-3.png)
 
 
 ## Step 4: Generate File Integrity Events
@@ -160,9 +157,6 @@ These actions simulate:
 
 ---
 
-![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
-
-
 ## Step 4: Monitor FIM Alerts in Wazuh Dashboard
 
 1. Log into the **Wazuh Dashboard**
@@ -172,7 +166,6 @@ These actions simulate:
 ```
 agent.name: windows-server
 ```
-![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
 
 Observe alerts related to:
 
@@ -182,10 +175,11 @@ Observe alerts related to:
 * Permission changes
 
 ---
+![Wazuh-FIM-1](screenshots/wazuh-FIM-5.png)
 
-![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
+![Wazuh-FIM-1](screenshots/wazuh-FIM-5a.png)
 
-![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
+![Wazuh-FIM-1](screenshots/wazuh-FIM-5b.png)
 
 ## Step 5: SOC-Style Alert Analysis
 
