@@ -97,15 +97,16 @@ At the very top of the file monitoring is the time interval, this determins the 
   <directories check_all="yes">C:\SensitiveData</directories>
 </syscheck>
 ````
+![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
+
+![Wazuh-FIM-1](screenshots/wazuh-FIM-4.png)
 
 Restart the Wazuh agent service:
 
 ```powershell
 Restart-Service WazuhSvc
 ```
-![Wazuh-FIM-1](screenshots/wazuh-FIM-1.png)
 
-![Wazuh-FIM-1](screenshots/wazuh-FIM-4.png)
 ---
 
 ## Step 2: (Optional) Enable Windows Object Access Auditing
